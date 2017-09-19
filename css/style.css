@@ -5,11 +5,12 @@
 }
 
 body {
-  background-color: #f0f4fd;
+	background-color: #f0f4fd;
   height: auto;
   margin: 0;
   font-family: "Helvetica", "Arial", sans-serif;
   font-size: 12px;
+  text-align: center;
 }
 
 li {
@@ -36,12 +37,14 @@ h3 {
   color: black;
   font-weight: lighter;
   text-align: center;
-  margin: 1em auto;
-  padding-top: 10px;
+  margin-left: 2em;
+  margin-right: 2em;
+  padding-top: 2em;
 }
 
 a {
   text-decoration: none;
+  /*letter-spacing: 4px;*/
   color: #000;
   position: relative;
 }
@@ -165,12 +168,14 @@ nav a .active {
   justify-content: space-between;
   flex-flow: row; 
   flex-wrap: wrap;
+  margin-left: 2em;
+  margin-right: 2em;
+  padding-top: 2em;
 }
 
 .project {
   width: 30%;
   margin: 1em auto;
-  margin-left: 2em;
 }
 
 .project img {
