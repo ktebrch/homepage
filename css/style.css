@@ -5,7 +5,7 @@
 }
 
 body {
-	background-color: #f0f4fd;
+  background-color: #f0f4fd;
   height: auto;
   margin: 0;
   font-family: "Helvetica", "Arial", sans-serif;
@@ -42,9 +42,12 @@ h3 {
 
 a {
   text-decoration: none;
-  letter-spacing: 4px;
   color: #000;
   position: relative;
+}
+
+.normal a {
+  text-decoration: underline;
 }
 
 .nav a:before {
