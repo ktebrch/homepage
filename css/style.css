@@ -1,16 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Nunito&effect=neon');
-
 body {
-	background-color: #f0f4fd;
+	background-color: #bceafd;
   height: auto;
   margin: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 14px;
 }
 
@@ -18,19 +18,16 @@ li {
   list-style: none;
 }
 
-
-
 h1 {
-  color: #ef2b91;
-  font-weight: 800;
-  letter-spacing: 6px;
+  color: #70b765;
+  font-weight: 700;
   cursor: pointer;
   margin-bottom: 10px;
 }
 
 h2 {
   color: black;
-  font-weight: lighter;
+  font-weight: 400;
   letter-spacing: 6px;
   text-align: center;
   margin: 1em auto;
@@ -38,7 +35,7 @@ h2 {
 
 h3 {
   color: black;
-  font-weight: lighter;
+  font-weight: 400;
   text-align: center;
   margin: 1em auto;
   padding-top: 10px;
@@ -97,22 +94,57 @@ nav li {
   position: absolute;
   width: 100%;
   min-height: 100%;
-  background: #ebecfc;
+  background: #87ddff;
+}
+
+@keyframes flip {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(180deg);
+  }
+}
+.flip:hover {
+  animation: flip 1s ease-in-out forwards;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(-10px);
+  }
+  25% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake:hover {
+  display: inline-block;
+  animation: shake 1s infinite;
 }
 
 .wave{
-  background: #f0f4fd;
+  background: #bceafd;
   display: inline-block;
   height :60%;
   width: 10px;
   position: absolute;
-  -webkit-animation-name: waves; 
-  -webkit-animation-duration: 5s; 
-  -webkit-animation-iteration-count:  infinite;
-  -webkit-transition-timing-function: ease-in-out;
+ animation-name: waves; 
+  animation-duration: 5s; 
+  animation-iteration-count:  infinite;
+ transition-timing-function: ease-in-out;
 }
 
-@-webkit-keyframes waves{
+@keyframes waves{
   0%{
     height:60%;
   }
