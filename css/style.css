@@ -6,12 +6,17 @@
     box-sizing: border-box;
 }
 
+canvas {
+  display: block;
+}
+
 body {
 	background-color: #bceafd;
   height: auto;
   margin: 0;
   font-family: "Quicksand", sans-serif;
   font-size: 14px;
+  font-weight: 600;
 }
 
 li {
@@ -27,7 +32,7 @@ h1 {
 
 h2 {
   color: black;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 6px;
   text-align: center;
   margin: 1em auto;
@@ -44,6 +49,7 @@ h3 {
 a {
   text-decoration: none;
   letter-spacing: 4px;
+  font-weight: 4600;
   color: #000;
   position: relative;
 }
@@ -90,46 +96,13 @@ nav li {
   margin-bottom: 10px;
 }
 
+/*wave animation*/      
+
 #ocean{
   position: absolute;
   width: 100%;
   min-height: 100%;
   background: #87ddff;
-}
-
-@keyframes flip {
-  from {
-    transform: rotateY(0deg);
-  }
-  to {
-    transform: rotateY(180deg);
-  }
-}
-.flip:hover {
-  animation: flip 1s ease-in-out forwards;
-}
-
-@keyframes shake {
-  0% {
-    transform: translateX(-10px);
-  }
-  25% {
-    transform: translateX(10px);
-  }
-  50% {
-    transform: translateX(-10px);
-  }
-  75% {
-    transform: translateX(10px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-.shake:hover {
-  display: inline-block;
-  animation: shake 1s infinite;
 }
 
 .wave{
@@ -158,7 +131,7 @@ nav li {
 
 /*top bar and .pages*/
 .bar {
-  background-color: #ebecfc;
+  background-color: #87ddff;
   overflow: hidden;
   position: relative;
 }
@@ -178,15 +151,13 @@ nav li {
 .bar a {
   text-align: center;
   color: black;
+  font-weight: 600;
   display: inline;
   margin-left: 2em;
   text-decoration: none;
   letter-spacing: 4px;
 }
 
-.pages {
-  background-color: #fff;
-}
 
 nav a .active {
   color: gray;
@@ -284,5 +255,73 @@ img {
 
 #portrait {
   width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
+
+/* animations */
+
+@keyframes fadeOut {
+      0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.fadeOut:hover {
+  animation: fadeOut 2s ease-out 1;
+    cursor: pointer;
+}
+     
+
+@keyframes zoomOut {
+      0% { transform: scale(1); }
+    100% { transform: scale(0); }
+}
+
+.zoomOut:hover {
+  animation: zoomOut 1s ease-in-out 1;
+  cursor: pointer;
+}
+
+@keyframes rotateCounterClockwise {
+      0% { transform: rotate(0deg); }
+    100% { transform: rotate(-360deg); }
+}
+
+.rotateCounterClockwise:hover {
+  animation: rotateCounterClockwise 2s linear infinite;
+  cursor: pointer;
+}
+   
+
+
+@keyframes textGlow {
+      0% { text-shadow: 0 0 10px #00ff00; }
+    50% { text-shadow: 0 0 20px #00ff00; }
+    100% { text-shadow: 0 0 50px #00ff00; }
+}
+
+.textGlow:hover {
+  animation: textGlow 1.5s ease-in-out infinite;
+  cursor: pointer;
+}
+     
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.shake:hover{
+  animation: shake 0.5s infinite;
+  cursor: pointer;
+}
+
+
